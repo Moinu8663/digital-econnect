@@ -1,0 +1,58 @@
+<section class="login-block">
+    <div class="row ">
+        <div class="col-lg-4  login-sec" style="margin-top: 150px; margin-left: 80px;">
+            <div class="card shadow p-3">
+                <h2 class="text-center text-primary">Login Now</h2>
+                <form class="login-form" action="" #f="ngForm" novalidate (ngSubmit)="onSubmit()">
+                    <div class="form-group">
+                        <label for="exampleInputEmail1" class="text-uppercase mb-1">Email</label>
+                        <input type="email" class="form-control" name="email" id="" placeholder="email"
+                            [(ngModel)]="formdata.email" #email="ngModel" required
+                            pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+                            title="please enter a valid email address" />
+                        <span class="text-danger" *ngIf="this.submit&&email.errors?.['required']">
+                            Email is required.
+                        </span>
+                        <!-- <span class="text-danger" *ngIf="this.submit && email.errors?.['pattern']">
+                      Please enter a valid email address.
+                    </span> -->
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1" class="text-uppercase mt-2 mb-1">Password</label>
+                        <input class="form-control" type="password" name="password" placeholder="password" id=""
+                            [(ngModel)]="formdata.password" #password="ngModel" required
+                            pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$"
+                            title="Password must contain at least 8 characters, one uppercase letter, one lowercase letter, one number, and one special character (@ $ ! % * ? &)." />
+                        <span class="text-danger" *ngIf="this.submit && password.errors?.['required']">
+                            Password is required.
+                        </span>
+                        <span class="text-danger" *ngIf="this.submit&&password.errors?.['required']">
+                            Invalid password </span>
+                    </div>
+                    <div class="form-group">
+                        <div class="text-center" *ngIf="this.loading">
+                            <div class="spinner-border text-primary " role="status">
+                                <span class="sr-only">Loading...</span>
+                            </div>
+                        </div>
+                        <span class="text-danger" *ngIf="this.errorMessage">
+                            <p [innerText]="this.errorMessage"></p>
+                        </span>
+                        <input type="submit" class="btn btn-primary  btn-login float-right mt-2" [disabled]="this.loading"
+                            value="Login" (click)="submit=true">
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="form-group text-center mt-1">
+                        Create new account ? Please <a href="javascript:void(0);" routerLink="/register"
+                            routerLink="/Register">Register</a>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+        <div class="col-lg-4 offset-2">
+            <img src="../assets/images/team_bd_image-1.png" alt="img" />
+        </div>
+    </div>
+    <!-- </div> -->
+</section>

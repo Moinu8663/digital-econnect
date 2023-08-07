@@ -1,0 +1,23 @@
+<div class="container">
+<div>
+  <h1 class="text-center mt-4">Withdraw Money</h1>
+</div>
+<div class="card-container offset">
+  <div class="card">
+    <!-- <label for="senderAccount">Account No:</label>
+    <input type="text" id="senderAccount" name="senderAccount" class="account-input" value="{{ 123456789 }}" disabled>
+    <br> -->
+    <!-- <label for="receiverAccount">Receiver Account No:</label>
+    <input type="text" id="receiverAccount" name="receiverAccount" class="account-input" [(ngModel)]="receiverAccountNo" required>
+    <br> -->
+    <label for="amount">Amount has been transferred:</label>
+    <input type="number" id="amount" name="amount" class="amount-input" [(ngModel)]="transfer.amount" required>
+    <br>
+    <label>
+      <input type="checkbox" [(ngModel)]="confirmation"> Confirm
+    </label>
+    <p class="card-text">Transfer your money from one bank to another</p>
+    <a  class="btn btn-primary" (click)="sendMoney()">Send</a>
+  </div>
+</div>
+</div>

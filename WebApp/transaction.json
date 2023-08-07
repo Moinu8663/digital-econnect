@@ -1,0 +1,14 @@
+{
+  "transaction":
+  [
+    {
+     "transaction_id":"367994628",
+     "account_no":"37255278",
+     "transaction_type":"credit",
+     "transaction_amount":"500",
+     "transaction_date":"11-07-2023",
+     "total_amount":"5500",
+     "transaction_status":"success"
+    }
+  ]
+}

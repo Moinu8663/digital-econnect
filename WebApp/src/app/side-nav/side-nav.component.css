@@ -1,0 +1,27 @@
+.sidenav {
+  width: 250px;
+  height: 100%;
+  background-color: #f1f1f1;
+  padding: 20px;
+  position: relative; /* Add this line */
+   /* Add this line to position it at the top of the page */
+  left: 0; /* Add this line to position it at the left of the page */
+  bottom: 0; /* Add this line to stretch it to the bottom of the page */
+}
+
+button :hover {
+  color: red;
+}
+.sidenav-links {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidenav-links li {
+  margin-bottom: 10px;
+}
+
+.sidenav-links a {
+  color: #333;
+  text-decoration: none;
+}

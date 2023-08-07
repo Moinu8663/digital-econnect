@@ -1,0 +1,103 @@
+<section class="register-block">
+  <div class="container">
+    <div class="row ">
+      <div class="col register-sec">
+        <h2 class="text-center text-primary">Register Now</h2>
+        <form class="register-form" action="" #f="ngForm" novalidate (ngSubmit)="onSubmit()">
+          <div class="form-group">
+            <label for="exampleInputName" class="text-uppercase mb-2">Name</label>
+
+            <input type="text" class="form-control mb-2" name="name" id="" [(ngModel)]="formdata.name" #name="ngModel"
+              required placeholder="name" />
+            <span class="text-danger" *ngIf="this.submit&&name.errors?.['required']">
+              Name is required.
+            </span>
+          </div>
+          <div class="form-group">
+            <label for="exampleInputEmail" class="text-uppercase mb-2">Email</label>
+
+            <input type="text" class="form-control mb-2" name="email" id="" placeholder="email" [(ngModel)]="formdata.email"
+              #email="ngModel" required pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+              title="Please enter a valid email address." />
+            <span class="text-danger" *ngIf="this.submit&&email.errors?.['required']">
+              Email is required.
+            </span>
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword" class="text-uppercase mb-2">Password</label>
+            <input class="form-control mb-2" type="password" name="password" placeholder="password" id="" [(ngModel)]="formdata.password"
+              #password="ngModel" required minlength="8"
+              pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$"
+              title="Password must contain at least 8 characters, one uppercase letter, one lowercase letter, one number, and one special character (@ $ ! % * ? &)." />
+
+            <span class="text-danger" *ngIf="this.submit&&password.errors?.['required']">
+              Password is required.
+            </span>
+            <span class="text-danger" *ngIf="this.submit&&password.errors?.['minlength']">
+              Minimum length of password is 8 characters
+            </span>
+          </div>
+          <div class="form-group">
+            <label for="exampleInputMobile" class="text-uppercase mb-2">Mobile</label>
+
+            <input type="text" class="form-control mb-2" name="mobile" id="" [(ngModel)]="formdata.mobile" #mobile="ngModel"
+              required placeholder="mobile number" pattern="^[0-9]{10}$"
+              title="Mobile number must be 10 digits long and contain only numerical digits." />
+            <span class="text-danger" *ngIf="this.submit&&mobile.errors?.['required']">
+              mobile number is required.
+            </span>
+            <span class="text-danger" *ngIf="this.submit && mobile.errors?.['pattern']">
+              Mobile number must be 10 digits long and contain only numerical digits.
+            </span>
+          </div>
+          <div class="form-group">
+            <label for="exampleInputAddress" class="text-uppercase mb-2">Address</label>
+            <textarea class="form-control mb-2" name="address" id="" placeholder="address" [(ngModel)]="formdata.address"
+              #address="ngModel" required pattern="^[a-zA-Z0-9, -]+$"
+              title="Address can contain only alphanumeric characters, spaces, commas, and hyphens."></textarea>
+
+            <span class="text-danger" *ngIf="this.submit&&address.errors?.['required']">
+              address is required.
+            </span>
+            <span class="text-danger" *ngIf="this.submit && address.errors?.['pattern']">
+              Address can contain only alphanumeric characters, spaces, commas, and hyphens.
+            </span>
+          </div>
+          <div class="form-group">
+            <label for="exampleInputAccount" class="text-uppercase mb-2">Account Number</label>
+
+            <input type="text" class="form-control mb-2" name="account_number" id="" [(ngModel)]="formdata.account_number"
+              #account_number="ngModel" required placeholder="Account Number" pattern="^[0-9]{10}$"
+              title="Account number must be 10 digits long and contain only numerical digits." />
+            <span class="text-danger" *ngIf="this.submit&&account_number.errors?.['required']">
+              account number is required.
+            </span>
+            <span class="text-danger" *ngIf="this.submit && account_number.errors?.['pattern']">
+              Account number must be 10 digits long and contain only numerical digits.
+            </span>
+          </div>
+          <div class="form-group">
+
+            <span class="text-danger" *ngIf="this.errorMessage">
+              <p [innerText]="this.errorMessage"></p>
+            </span>
+            <div class="text-center" *ngIf="this.loading">
+              <div class="spinner-border text-primary " role="status">
+                <span class="sr-only">Loading...</span>
+              </div>
+            </div>
+
+            <input type="submit" class="btn btn-primary mt-2" value="Register" (click)="submit=true"
+              [disabled]="this.loading">
+          </div>
+          <div class="clearfix"></div>
+          <div class="form-group text-center mt-2">
+            Already have account ? Please <a href="javascript:void(0);" routerLink="/Login">Login</a>
+          </div>
+
+
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

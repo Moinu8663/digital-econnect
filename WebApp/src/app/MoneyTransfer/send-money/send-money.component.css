@@ -1,0 +1,79 @@
+.container
+{
+ background-image: url('src/assets/images/5240.jpg');
+ background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 80vh;
+
+}
+.card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh; /* Adjust the height to center vertically */
+    /* background-image: url('../../assets/images/5240.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; */
+   
+  }
+
+  /* Styles for the card */
+  .card {
+    width: 18rem;
+    margin-bottom: 80px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    padding: 20px;
+  }
+
+  .card-title {
+    font-size: 1.25rem;
+    margin-bottom: 15px;
+  }
+
+  .card label {
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  .card input[type="radio"],
+  .card input[type="checkbox"] {
+    margin-right: 5px;
+  }
+
+  .card p {
+    margin-top: 15px;
+    color: #666;
+  }
+
+  .card .btn-primary {
+    display: block;
+    width: 100%;
+    margin-top: 15px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .card .btn-primary:hover {
+    background-color: #0056b3;
+  }
+
+  /* Styles for the textbox and amount input */
+  .selected-option,
+  .amount-input {
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }

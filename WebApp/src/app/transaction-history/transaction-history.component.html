@@ -1,0 +1,47 @@
+
+
+<div class="container-fluid" >
+  <div>
+    <div>
+      <h1 class="text-center mt-2">Transaction History</h1>
+    </div>
+    <div class="d-flex mb-4 mt-2">
+      <button type="button" class="btn btn-outline-info">Print</button>
+      <form class="subnav-search d-flex flex-nowrap ms-auto">
+      <label for="search" class="visually-hidden">Search for Transaction History</label>
+      <input class="form-control search mb-0" id="search" type="search" placeholder="Start typing to filter..." autocomplete="off">
+      </form>
+      </div>
+  </div>
+  
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">TRANSACTION_ID </th>
+        <th scope="col">ACCOUNT_NO</th>
+        <th scope="col">TRANSACTION_TYPE</th>
+        <th scope="col">TRANSACTION_AMOUNT</th>
+        <th scope="col">TRANSACTION_DATE</th>
+        <th scope="col">TOTAL_AMOUNT</th>
+        <th scope="col">TRANSACTION_STATUS</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor = "let t of transactionlist">
+        <td>{{t.trasaction_id}}</td>
+        <td>{{t.account_no}}</td>
+        <td>{{t.transaction_type}}</td>
+        <td>{{t.transaction_amount}}</td>
+        <td>{{t.transaction_date}}</td>
+        <td>{{t.total_amount}}</td>
+        <td>{{t.transaction_status}}</td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
+
+ 
+
+          
+         

@@ -1,0 +1,46 @@
+.container
+{
+ background-image: url('src/assets/images/image11.jpg');
+ background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.center-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom:400px;
+
+}
+
+.my-custom-card {
+  width: 400px; 
+  margin: 10px; 
+  background-color:#0D6EFD;
+}
+
+.center-button {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+
+}
+
+
+mat-form-field {
+  width: 100%; 
+  max-width: 400px; 
+}
+.mat-form-field-label {
+  width: 150px;
+}
